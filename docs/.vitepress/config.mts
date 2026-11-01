@@ -187,7 +187,10 @@ export default defineConfig({
 	themeConfig: {
 		logo: '/logo.svg',
 		siteTitle: 'Chroma',
-		socialLinks: [{ icon: 'github', link: repo }],
+		socialLinks: [
+			{ icon: 'github', link: repo },
+			{ icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5c-2.9 0-4.7 2.1-4.7 5.1 0 1 .2 1.9.6 2.7-1 1.5-1.6 3.4-1.6 5.1 0 1.8.8 2.9 2 2.9.7 0 1.3-.5 1.7-1.3.5.8 1.2 1.3 2 1.3s1.5-.5 2-1.3c.4.8 1 1.3 1.7 1.3 1.2 0 2-1.1 2-2.9 0-1.7-.6-3.6-1.6-5.1.4-.8.6-1.7.6-2.7 0-3-1.8-5.1-4.7-5.1z"/><ellipse cx="9.4" cy="7.6" rx="1" ry="1.4" fill="#fff"/><ellipse cx="14.6" cy="7.6" rx="1" ry="1.4" fill="#fff"/><path d="M10.8 10.5h2.4l-1.2 1.6z" fill="#fff"/><path d="M6.3 14.8c.9 2.8 2.9 4.3 5.7 4.3s4.8-1.5 5.7-4.3" fill="none" stroke="#fff" stroke-width=".8" stroke-linecap="round"/></svg>' }, link: 'https://qm.qq.com/q/zSaZRWS4eY', ariaLabel: 'QQ' }
+		],
 		search: { provider: 'local' }
 	},
 
