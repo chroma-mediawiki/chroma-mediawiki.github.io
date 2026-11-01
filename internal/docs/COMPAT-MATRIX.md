@@ -33,9 +33,9 @@ releases; only the local 1.46 harness was exercised for UI screenshots.
 - CI currently runs PHP lint/JSON/required-file checks with PHP 8.3 plus token
   drift. It does not run a full MediaWiki matrix; branch runtime checks are manual.
 
-## Released builds (v0.5.2)
+## Released builds (v0.6.0)
 
-- `v0.5.2-REL1_43` / `v0.5.2-REL1_45` / `v0.5.2-REL1_46` tags exist; each tag
+- `v0.6.0-REL1_43` / `v0.6.0-REL1_45` / `v0.6.0-REL1_46` tags exist; each tag
   builds a GitHub Release ZIP via `.github/workflows/release.yml`.
 - Runtime smoke tests completed on MediaWiki **1.43.0**, **1.45.0** and
   **1.46.0**: skin registers/renders, `data-chroma-*` attributes and

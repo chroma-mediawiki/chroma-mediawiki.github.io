@@ -8,7 +8,7 @@ Chroma 是一套 MediaWiki 皮肤。装好之后，你的 wiki 会变成：
 
 - **应用式界面**：顶部栏、搜索、导航抽屉、右侧目录；
 - **更适合长文的阅读布局**：正文居中，工具后退；
-- **自带浅色/深色主题**，还能选四种主题色；
+- **自带浅色/深色主题**，还能选八种主题色；
 - **手机端直接使用 Chroma**，不再套 MinervaNeue。
 
 你不需要会写 PHP，也不需要 Node.js。安装只需要三步：
@@ -23,9 +23,9 @@ Chroma 是一套 MediaWiki 皮肤。装好之后，你的 wiki 会变成：
 
 | 你的 MediaWiki | 下载 |
 |---|---|
-| 1.43.x | [v0.5.2-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_43) |
-| 1.45.x | [v0.5.2-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_45) |
-| 1.46.x | [v0.5.2-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_46) |
+| 1.43.x | [v0.6.0-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_43) |
+| 1.45.x | [v0.6.0-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_45) |
+| 1.46.x | [v0.6.0-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_46) |
 
 不要混用版本：1.46 的分支装到 1.43 上会报错。
 
@@ -42,7 +42,7 @@ Chroma 是一套 MediaWiki 皮肤。装好之后，你的 wiki 会变成：
 
 ## 关于「版本」
 
-当前文档对应 **v0.5.2**。Chroma 同时维护三条线：
+当前文档对应 **v0.6.0**。Chroma 同时维护三条线：
 
 - MediaWiki **1.43 LTS** → 分支 `REL1_43`
 - MediaWiki **1.45** → 分支 `REL1_45`

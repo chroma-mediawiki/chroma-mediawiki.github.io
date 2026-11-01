@@ -16,7 +16,7 @@ title: 分支与版本
 - 每个分支独立修兼容问题，不把 1.46 的 workaround 合回 1.43；
 - 1.43 模板使用 `data-namespaces` / `data-personal`；
 - 1.45 / 1.46 使用 `data-associated-pages` / `data-user-menu`；
-- 发布标签形如 `v0.5.2-REL1_43`、`v0.5.2-REL1_45`、`v0.5.2-REL1_46`；
+- 发布标签形如 `v0.6.0-REL1_43`、`v0.6.0-REL1_45`、`v0.6.0-REL1_46`；
 - 三个标签分别由 `release.yml` 构建 ZIP。
 
 ## 新增版本线

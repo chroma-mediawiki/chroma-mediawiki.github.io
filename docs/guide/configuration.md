@@ -10,7 +10,7 @@ Chroma 的所有配置都写在 wiki 根目录的 `LocalSettings.php` 里。改�
 
 | 我想… | 改这个 | 填什么 |
 |---|---|---|
-| 换默认主题色 | `$wgChromaDefaultSeed` | `#006A6A` / `#0061A4` / `#386A20` / `#6750A4` |
+| 换默认主题色 | `$wgChromaDefaultSeed` | 见下面的八套预设 |
 | 默认用深色 | `$wgChromaDefaultScheme` | `dark` / `light` / `system` |
 | 默认用阅读布局 | `$wgChromaDefaultLayout` | `reading` / `app` |
 | 长文默认进入阅读模式 | `$wgChromaDefaultReadingMode` | `true` / `false` |
@@ -26,7 +26,7 @@ Chroma 的所有配置都写在 wiki 根目录的 `LocalSettings.php` 里。改�
 $wgChromaDefaultSeed = '#0061A4'; // 蓝色
 ```
 
-Chroma 目前只支持四种预设：
+Chroma 目前只支持八种预设：
 
 | 颜色 | 值 |
 |---|---|
@@ -34,6 +34,10 @@ Chroma 目前只支持四种预设：
 | Blue | `#0061A4` |
 | Green | `#386A20` |
 | Violet | `#6750A4` |
+| Rose | `#984061` |
+| Amber | `#7D5700` |
+| Indigo | `#4355B9` |
+| Lime | `#4C6700` |
 
 填其他颜色会回退到 Teal。想做更细的颜色定制，见 [主题与配色](theming.md)。
 
@@ -90,7 +94,7 @@ $wgChromaAllowUserReadingMode = true;
 wfLoadSkin( 'Chroma' );
 $wgDefaultSkin = 'chroma';
 
-// 主题色：teal / blue / green / violet
+// 主题色：teal / blue / green / violet / rose / amber / indigo / lime
 $wgChromaDefaultSeed = '#006A6A';
 
 // system / light / dark

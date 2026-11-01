@@ -10,7 +10,7 @@ Every Chroma setting lives in `LocalSettings.php` in the wiki root. Save, refres
 
 | I want to… | Setting | Values |
 |---|---|---|
-| Change the default color | `$wgChromaDefaultSeed` | `#006A6A`, `#0061A4`, `#386A20`, `#6750A4` |
+| Change the default color | `$wgChromaDefaultSeed` | see the eight presets below |
 | Default to dark | `$wgChromaDefaultScheme` | `dark`, `light`, `system` |
 | Default to reading layout | `$wgChromaDefaultLayout` | `reading`, `app` |
 | Start articles in reading mode | `$wgChromaDefaultReadingMode` | `true`, `false` |
@@ -24,7 +24,7 @@ Every Chroma setting lives in `LocalSettings.php` in the wiki root. Save, refres
 $wgChromaDefaultSeed = '#0061A4'; // blue
 ```
 
-Only four presets exist:
+Only eight presets exist:
 
 | Color | Value |
 |---|---|
@@ -32,6 +32,10 @@ Only four presets exist:
 | Blue | `#0061A4` |
 | Green | `#386A20` |
 | Violet | `#6750A4` |
+| Rose | `#984061` |
+| Amber | `#7D5700` |
+| Indigo | `#4355B9` |
+| Lime | `#4C6700` |
 
 Any other value falls back to Teal. For deeper customization, see [Themes & color](theming.md).
 

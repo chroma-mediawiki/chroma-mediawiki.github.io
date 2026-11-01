@@ -31,4 +31,4 @@ npm run lint      # JS + CSS
 
 ## Current version
 
-This documentation targets **v0.5.2**. Maintained branches: `REL1_43`, `REL1_45`, `REL1_46`.
+This documentation targets **v0.6.0**. Maintained branches: `REL1_43`, `REL1_45`, `REL1_46`.

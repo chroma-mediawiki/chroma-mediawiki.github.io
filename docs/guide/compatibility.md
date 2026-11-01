@@ -35,7 +35,7 @@ Chroma 本身只改外观和布局，不修改扩展输出。我们实际测试�
 
 - **AbuseFilter**：测试环境缺少 `Wikimedia\Equivset`，未启用；不是皮肤导致。
 - **Math**：本地使用 native MathML；`mathml` 模式需要 RESTBase/Mathoid。
-- **任意主题色**：只支持四种预设，不支持任意 seed。
+- **任意主题色**：只支持八种预设，不支持任意 seed。
 - **完整 Material 3**：Chroma 使用 MD3 风格的 token，并实现部分 Expressive 视觉，不是完整 Material 3 组件库。
 - **自动化测试**：当前没有按扩展的自动化测试套件，扩展矩阵是手动验证。
 

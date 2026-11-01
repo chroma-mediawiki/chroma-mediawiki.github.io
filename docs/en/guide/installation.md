@@ -21,11 +21,11 @@ Open `Special:Version` to confirm your MediaWiki version, then download:
 
 | Your MediaWiki | Download |
 |---|---|
-| 1.43 LTS | [v0.5.2-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_43) |
-| 1.45 | [v0.5.2-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_45) |
-| 1.46 | [v0.5.2-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_46) |
+| 1.43 LTS | [v0.6.0-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_43) |
+| 1.45 | [v0.6.0-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_45) |
+| 1.46 | [v0.6.0-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_46) |
 
-The file is named `Chroma-v0.5.2-REL1_xx.zip`.
+The file is named `Chroma-v0.6.0-REL1_xx.zip`.
 
 ## Step 2: Put it in skins/Chroma
 

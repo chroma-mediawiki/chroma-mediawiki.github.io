@@ -10,9 +10,9 @@ Open `Special:Version` and note whether MediaWiki is 1.43, 1.45 or 1.46.
 
 ## 2. Download the matching ZIP
 
-- 1.43 LTS → `v0.5.2-REL1_43`
-- 1.45 → `v0.5.2-REL1_45`
-- 1.46 → `v0.5.2-REL1_46`
+- 1.43 LTS → `v0.6.0-REL1_43`
+- 1.45 → `v0.6.0-REL1_45`
+- 1.46 → `v0.6.0-REL1_46`
 
 Download from [Releases](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases).
 
@@ -47,7 +47,7 @@ Special:Preferences#mw-prefsection-rendering
 
 Under Appearance you can change:
 
-- theme color: teal / blue / green / violet;
+- theme color: teal / blue / green / violet / rose / amber / indigo / lime;
 - scheme: system / light / dark;
 - layout: app / reading;
 - reading mode.

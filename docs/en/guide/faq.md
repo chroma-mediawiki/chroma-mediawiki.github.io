@@ -29,9 +29,9 @@ No. Installation only requires editing two lines in `LocalSettings.php`. Node.js
 
 Chroma shows a logo only when a real `$wgLogos` is configured. Without it, Chroma shows the site name and never generates an initial-letter placeholder. See [Configuration](configuration.md).
 
-## Why only four theme colors?
+## Why only preset theme colors?
 
-This release has four generated presets: Teal, Blue, Green and Violet. Arbitrary seeds are not implemented; other values fall back to Teal.
+This release has eight generated presets: Teal, Blue, Green, Violet, Rose, Amber, Indigo and Lime. Arbitrary seeds are not implemented; other values fall back to Teal.
 
 ## Mobile still shows MinervaNeue
 

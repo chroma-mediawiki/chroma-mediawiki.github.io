@@ -6,6 +6,12 @@ title: 更新日志
 
 完整历史见 [皮肤仓库 CHANGELOG.md](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/blob/main/CHANGELOG.md)。
 
+## v0.6.0
+
+- Added Rose, Amber, Indigo and Lime presets (eight total);
+- updated preferences and i18n;
+- added screenshot galleries to the READMEs and docs site.
+
 ## v0.5.2
 
 - 页面头部层级重做：标题在上，页面标签/操作在工具栏；

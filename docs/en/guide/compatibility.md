@@ -35,7 +35,7 @@ The 1.46 environment configures 31 Tier 1 extensions; 1.43 and 1.45 each install
 
 - **AbuseFilter**: the test environment lacks `Wikimedia\Equivset`, so it is disabled; not a skin issue.
 - **Math**: the local environment uses native MathML; `mathml` mode requires RESTBase/Mathoid.
-- **Arbitrary colors**: four presets only.
+- **Arbitrary colors**: eight presets only.
 - **Full Material 3**: Chroma is an MD3-style token layer plus selected Expressive patterns, not a complete Material 3 component library.
 - **Automation**: there is no per-extension automated suite; the matrix is manual.
 

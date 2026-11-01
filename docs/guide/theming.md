@@ -14,7 +14,7 @@ Special:Preferences#mw-prefsection-rendering
 
 在「外观」里可以选：
 
-- 主题色：Teal / Blue / Green / Violet；
+- 主题色：Teal / Blue / Green / Violet / Rose / Amber / Indigo / Lime；
 - 明暗：跟随系统 / 浅色 / 深色；
 - 布局和阅读模式。
 
@@ -28,7 +28,7 @@ Special:Preferences#mw-prefsection-rendering
 $wgChromaDefaultSeed = '#0061A4'; // blue
 ```
 
-四种预设：
+八种预设：
 
 | 预设 | 值 | 适合 |
 |---|---|---|
@@ -36,6 +36,10 @@ $wgChromaDefaultSeed = '#0061A4'; // blue
 | Blue | `#0061A4` | 偏正式、企业 |
 | Green | `#386A20` | 偏自然、社区 |
 | Violet | `#6750A4` | 偏创意 |
+| Rose | `#984061` | 柔和、偏暖 |
+| Amber | `#7D5700` | 温暖、醒目 |
+| Indigo | `#4355B9` | 冷静、技术 |
+| Lime | `#4C6700` | 清爽、活力 |
 
 目前不支持任意颜色；填其他值会回退到 Teal。完整配置项见 [配置](configuration.md)。
 
@@ -50,6 +54,14 @@ $wgChromaDefaultScheme = 'dark'; // system | light | dark
 ```
 
 访客仍然可以在顶栏切换。深色模式的对比度按 WCAG AA 调整。
+
+## 预设效果
+
+| Teal | Blue | Green | Violet |
+|---|---|---|---|
+| <img src="/screenshots/preset-teal.png" width="240" alt="Teal"> | <img src="/screenshots/preset-blue.png" width="240" alt="Blue"> | <img src="/screenshots/preset-green.png" width="240" alt="Green"> | <img src="/screenshots/preset-violet.png" width="240" alt="Violet"> |
+| **Rose** | **Amber** | **Indigo** | **Lime** |
+| <img src="/screenshots/preset-rose.png" width="240" alt="Rose"> | <img src="/screenshots/preset-amber.png" width="240" alt="Amber"> | <img src="/screenshots/preset-indigo.png" width="240" alt="Indigo"> | <img src="/screenshots/preset-lime.png" width="240" alt="Lime"> |
 
 ## 高级：颜色 token
 

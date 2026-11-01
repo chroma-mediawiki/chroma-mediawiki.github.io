@@ -4,7 +4,7 @@ import { withBase } from 'vitepress'
 const features = [
 	{
 		title: '色彩系统',
-		body: '默认 seed #006A6A，内置 teal / blue / green / violet 四套预设。颜色、字阶、形状、海拔与动效统一走 --md-sys-* token。',
+		body: '默认 seed #006A6A，内置 teal / blue / green / violet / rose / amber / indigo / lime 八套预设。颜色、字阶、形状、海拔与动效统一走 --md-sys-* token。',
 		icon: 'M12 3a9 9 0 0 0 0 18c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16a5 5 0 0 0 5-5c0-4.42-4.03-8-9-8zm-5.5 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm3-4a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm3 4a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z'
 	},
 	{
@@ -41,9 +41,9 @@ const shots = [
 ]
 
 const versions = [
-	{ label: '1.43 LTS', branch: 'REL1_43', tag: 'v0.5.2-REL1_43' },
-	{ label: '1.45', branch: 'REL1_45', tag: 'v0.5.2-REL1_45' },
-	{ label: '1.46', branch: 'REL1_46', tag: 'v0.5.2-REL1_46' }
+	{ label: '1.43 LTS', branch: 'REL1_43', tag: 'v0.6.0-REL1_43' },
+	{ label: '1.45', branch: 'REL1_45', tag: 'v0.6.0-REL1_45' },
+	{ label: '1.46', branch: 'REL1_46', tag: 'v0.6.0-REL1_46' }
 ]
 
 const repo = 'https://github.com/chroma-mediawiki/mediawiki-skins-Chroma'

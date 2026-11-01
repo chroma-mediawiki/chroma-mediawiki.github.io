@@ -16,7 +16,7 @@ title: Branches & versions
 - fix compatibility per branch; do not merge 1.46 workarounds into 1.43;
 - the 1.43 template uses `data-namespaces` / `data-personal`;
 - 1.45 / 1.46 use `data-associated-pages` / `data-user-menu`;
-- tags look like `v0.5.2-REL1_43`, `v0.5.2-REL1_45`, `v0.5.2-REL1_46`;
+- tags look like `v0.6.0-REL1_43`, `v0.6.0-REL1_45`, `v0.6.0-REL1_46`;
 - `release.yml` builds one ZIP per tag.
 
 ## Adding a version line

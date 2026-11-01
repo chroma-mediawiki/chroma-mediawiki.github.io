@@ -31,9 +31,9 @@ skins/Chroma/skin.json
 
 Chroma 只在配置了真实的 `$wgLogos` 时显示 logo。没有配置时只显示站点名，不会自动生成首字母占位图。配置方法见 [配置](configuration.md)。
 
-## 为什么主题色只有四种？
+## 为什么主题色只有预设的几种？
 
-当前版本使用四套预设色板：Teal、Blue、Green、Violet。任意 seed 生成完整色板还没有实现；填其他颜色会回退到 Teal。
+当前版本使用八套预设色板：Teal、Blue、Green、Violet、Rose、Amber、Indigo、Lime。任意 seed 生成完整色板还没有实现；填其他颜色会回退到 Teal。
 
 ## 手机端为什么还是 MinervaNeue？
 

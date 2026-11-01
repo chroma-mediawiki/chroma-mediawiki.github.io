@@ -11,9 +11,9 @@ title: Releasing
 5. tag each branch head:
 
 ```bash
-v0.5.2-REL1_43
-v0.5.2-REL1_45
-v0.5.2-REL1_46
+v0.6.0-REL1_43
+v0.6.0-REL1_45
+v0.6.0-REL1_46
 ```
 
 6. `release.yml` builds ZIPs and creates GitHub Releases;

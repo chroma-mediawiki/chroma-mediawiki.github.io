@@ -10,9 +10,9 @@ title: 快速开始
 
 ## 2. 下载对应 ZIP
 
-- 1.43 LTS → `v0.5.2-REL1_43`
-- 1.45 → `v0.5.2-REL1_45`
-- 1.46 → `v0.5.2-REL1_46`
+- 1.43 LTS → `v0.6.0-REL1_43`
+- 1.45 → `v0.6.0-REL1_45`
+- 1.46 → `v0.6.0-REL1_46`
 
 下载地址在 [Releases](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases)。
 
@@ -47,7 +47,7 @@ Special:Preferences#mw-prefsection-rendering
 
 在「外观」里可以改：
 
-- 主题色：teal / blue / green / violet；
+- 主题色：teal / blue / green / violet / rose / amber / indigo / lime；
 - 明暗：跟随系统 / 浅色 / 深色；
 - 布局：应用式 / 阅读式；
 - 阅读模式。

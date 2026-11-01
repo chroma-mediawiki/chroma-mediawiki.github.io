@@ -23,9 +23,9 @@ Log in and open `Special:Version`. Look at the **MediaWiki** version.
 
 | Your MediaWiki | Download |
 |---|---|
-| 1.43.x | [v0.5.2-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_43) |
-| 1.45.x | [v0.5.2-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_45) |
-| 1.46.x | [v0.5.2-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_46) |
+| 1.43.x | [v0.6.0-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_43) |
+| 1.45.x | [v0.6.0-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_45) |
+| 1.46.x | [v0.6.0-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.6.0-REL1_46) |
 
 Do not mix branches: a 1.46 package will not work on 1.43.
 
@@ -42,7 +42,7 @@ Do not mix branches: a 1.46 package will not work on 1.43.
 
 ## About the version
 
-This documentation targets **v0.5.2**. Chroma maintains three lines:
+This documentation targets **v0.6.0**. Chroma maintains three lines:
 
 - MediaWiki **1.43 LTS** → `REL1_43`
 - MediaWiki **1.45** → `REL1_45`

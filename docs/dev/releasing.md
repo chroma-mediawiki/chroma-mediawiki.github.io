@@ -11,9 +11,9 @@ title: 发布流程
 5. 在分支 head 创建标签：
 
 ```bash
-v0.5.2-REL1_43
-v0.5.2-REL1_45
-v0.5.2-REL1_46
+v0.6.0-REL1_43
+v0.6.0-REL1_45
+v0.6.0-REL1_46
 ```
 
 6. `release.yml` 在标签上构建 ZIP 并创建 GitHub Release；

@@ -14,7 +14,7 @@ npm run presets
 
 - `tools/generate-tokens.mjs` 使用 `@material/material-color-utilities` 从 seed 生成色彩角色、字阶、形状、海拔、动效、状态层；
 - 输出 `resources/styles/tokens.css` 和仓库根目录的 `tokens.json`；
-- `tools/generate-presets.mjs` 生成四套预设到 `resources/styles/tokens-presets.css`。
+- `tools/generate-presets.mjs` 生成八套预设到 `resources/styles/tokens-presets.css`。
 
 CI 的 `tokens` job 会重新生成并检查 drift：
 
