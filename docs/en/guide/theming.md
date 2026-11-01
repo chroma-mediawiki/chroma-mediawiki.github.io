@@ -4,43 +4,66 @@ title: Themes & color
 
 # Themes & color
 
-## Tokens
+## For visitors: change colors
 
-Chroma organizes color, type, shape, elevation and motion with `--md-sys-*` variables:
+Log in and open:
+
+```text
+Special:Preferences#mw-prefsection-rendering
+```
+
+Under Appearance you can choose:
+
+- theme color: Teal / Blue / Green / Violet;
+- scheme: system / light / dark;
+- layout and reading mode.
+
+The top-bar **Display options** menu has the same switches.
+
+## For admins: change the site default
+
+In `LocalSettings.php`:
+
+```php
+$wgChromaDefaultSeed = '#0061A4'; // blue
+```
+
+Presets:
+
+| Preset | Value | Feel |
+|---|---|---|
+| Teal | `#006A6A` | default, neutral |
+| Blue | `#0061A4` | formal / corporate |
+| Green | `#386A20` | natural / community |
+| Violet | `#6750A4` | creative |
+
+Arbitrary colors are not supported; unknown values fall back to Teal. See [Configuration](configuration.md) for all options.
+
+## Dark mode
+
+Dark mode remaps the same semantic color roles onto dark surfaces; it is not a black overlay.
+
+Set the default:
+
+```php
+$wgChromaDefaultScheme = 'dark'; // system | light | dark
+```
+
+Visitors can still switch from the top bar. Dark colors are tuned for WCAG AA contrast.
+
+## Advanced: color tokens
+
+Chroma components use `--md-sys-*` variables:
 
 ```css
 --md-sys-color-primary
 --md-sys-color-on-primary
 --md-sys-color-surface
 --md-sys-color-surface-container
---md-sys-typescale-body-large-size
---md-sys-shape-corner-large
---md-sys-elevation-2
---md-sys-motion-easing-emphasized
+--md-sys-color-outline
 ```
 
-Components consume tokens; site CSS may override variables, but should avoid hard-coding component colors.
-
-## Four presets
-
-| Preset | Seed |
-|---|---|
-| teal | `#006A6A` |
-| blue | `#0061A4` |
-| green | `#386A20` |
-| violet | `#6750A4` |
-
-Users can choose in `Special:Preferences#mw-prefsection-rendering`; admins set the site default with `$wgChromaDefaultSeed`.
-
-## Dark mode
-
-- `data-chroma-theme="light"` / `"dark"` / `"system"`;
-- CSS switches tokens, not an inversion filter;
-- `prefers-color-scheme` is respected.
-
-## Custom colors
-
-Override semantic roles:
+Override a role in `MediaWiki:Chroma.css`:
 
 ```css
 :root {
@@ -49,21 +72,25 @@ Override semantic roles:
 }
 ```
 
-To generate a complete palette, use the repository token tooling:
+Change `primary` and `on-primary` together so contrast stays valid.
+
+## Advanced: regenerate the palette
+
+From the skin repository:
 
 ```bash
 npm install
 npm run tokens
 ```
 
-See [Design tokens](../dev/tokens.md).
+This updates `resources/styles/tokens.css` and `tokens.json`. See [Design tokens](../dev/tokens.md).
 
 ## Fonts
 
-The default stack uses system CJK fonts with a Roboto Flex fallback for Latin; no external font CDN is requested. Override `--md-sys-typescale-font-family` to change it.
+The default stack uses system fonts with a Roboto Flex fallback; no external font CDN is requested. Override `--md-sys-typescale-font-family` to change it.
 
 ## Avoid
 
-- editing `resources/styles/tokens.css` (generated);
-- expecting an arbitrary seed to generate a full palette (only four presets are supported);
-- mass `!important` overrides; prefer tokens and component classes.
+- editing generated `tokens.css`;
+- expecting an arbitrary seed to generate a palette;
+- mass `!important` layout overrides; prefer tokens or site CSS.

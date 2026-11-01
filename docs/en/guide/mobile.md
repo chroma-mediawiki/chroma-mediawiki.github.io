@@ -2,41 +2,56 @@
 title: Mobile
 ---
 
-# Mobile & MobileFrontend
+# Mobile
 
-## Full takeover
+## What mobile visitors get
 
-Install [MobileFrontend](https://www.mediawiki.org/wiki/Extension:MobileFrontend), then:
+Without MobileFrontend, Chroma is still responsive: narrow screens collapse the left navigation and constrain content.
+
+With MobileFrontend and Chroma as the default mobile skin, mobile visitors get:
+
+- ☰ navigation overlay;
+- search collapsed to a magnifier;
+- page tabs and actions in one toolbar row;
+- no TOC on narrow screens;
+- MobileFrontend sections expanded by default.
+
+## Setup
+
+1. Install [MobileFrontend](https://www.mediawiki.org/wiki/Extension:MobileFrontend);
+2. Add to `LocalSettings.php`:
 
 ```php
 wfLoadExtension( 'MobileFrontend' );
 $wgDefaultMobileSkin = 'chroma';
 ```
 
-Mobile UAs use Chroma directly instead of MinervaNeue.
+3. Visit on a phone, or switch the browser UA, and check the styling.
 
-## Behavior
+## Relationship with MinervaNeue
 
-- the drawer becomes an overlay;
-- search collapses to an icon;
-- page tabs and page actions share one toolbar row;
-- actions are 44×44 icon buttons;
-- MobileFrontend sections are expanded by default, so the article is not collapsed to headings;
-- the TOC is hidden on narrow screens.
+Chroma does not depend on MinervaNeue. With `$wgDefaultMobileSkin = 'chroma';`, mobile uses Chroma instead.
 
-## `?useskin=chroma` is no longer needed
+MinervaNeue may stay installed; it does not conflict.
 
-Mobile UAs already get Chroma. `?useskin=chroma` is only useful for forcing desktop-UAs into Chroma while debugging.
+## Do I still need `?useskin=chroma`?
+
+No. Mobile UAs use Chroma by default. `?useskin=chroma` is only for forcing Chroma on a desktop UA.
+
+## Still seeing the old mobile skin?
+
+1. Confirm `$wgDefaultMobileSkin = 'chroma';` is active;
+2. confirm MobileFrontend is loaded;
+3. clear cookies and cache;
+4. check `Special:Version` for Chroma;
+5. check whether another MobileFrontend setting overrides the default skin.
 
 ## Without MobileFrontend
 
-Chroma is responsive on its own; narrow screens still read well. MobileFrontend only adds mobile detection and mobile-specific features.
+Chroma works responsively on its own; MobileFrontend only adds mobile detection and mobile-specific features.
 
-## Troubleshooting
+## Related
 
-If mobile still shows MinervaNeue:
-
-1. confirm `$wgDefaultMobileSkin = 'chroma';` is active in `LocalSettings.php`;
-2. clear browser cookies and cache;
-3. check `Special:Version` for Chroma registration;
-4. check whether another MobileFrontend setting overrides `DefaultMobileSkin`.
+- [Interface & navigation](usage.md)
+- [Configuration](configuration.md)
+- [FAQ](faq.md)

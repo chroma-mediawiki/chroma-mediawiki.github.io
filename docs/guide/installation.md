@@ -4,79 +4,119 @@ title: 安装
 
 # 安装 Chroma
 
-## 环境要求
+这份说明假设你已经有一个能正常运行的 MediaWiki。如果还不会安装 MediaWiki，请先看 [MediaWiki 安装指南](https://www.mediawiki.org/wiki/Manual:Installation_guide/zh)。
+
+## 你需要准备
 
 - MediaWiki **1.43 LTS**、**1.45** 或 **1.46**；
-- PHP 版本跟随对应 MediaWiki 要求（1.43: 8.1+，1.45: 8.2+，1.46: 8.3+）；
-- 可写 `skins/` 目录，能在 `LocalSettings.php` 末尾追加配置；
-- 不需要 Node.js，发布 ZIP 已包含编译后的 CSS/JS。
+- 对应版本的 PHP（1.43 需要 8.1+，1.45 需要 8.2+，1.46 需要 8.3+）；
+- 能通过 FTP/SSH/文件管理器修改网站文件；
+- 能编辑 wiki 根目录的 `LocalSettings.php`。
 
-## 下载
+不需要 Node.js、npm 或编译工具；发布包里的 CSS/JS 已经是编译好的。
 
-从 [GitHub Releases](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases) 下载对应版本的 ZIP：
+## 第一步：下载对应版本
 
-| MediaWiki | Release |
+先打开 `Special:Version` 确认 MediaWiki 版本，然后下载：
+
+| 你的 MediaWiki | 下载地址 |
 |---|---|
 | 1.43 LTS | [v0.5.2-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_43) |
 | 1.45 | [v0.5.2-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_45) |
 | 1.46 | [v0.5.2-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_46) |
 
-下载后解压，使目录结构变成：
+下载的是 `Chroma-v0.5.2-REL1_xx.zip`。
+
+## 第二步：放进 skins/Chroma
+
+在 wiki 根目录找到 `skins` 文件夹（和 `LocalSettings.php`、`includes` 同级）。
+
+1. 在 `skins` 里新建文件夹 `Chroma`；
+2. 把 ZIP **里面的文件**解压到这个文件夹；
+3. 最终路径必须是：
 
 ```text
-skins/
-└── Chroma/
-    ├── skin.json
-    ├── includes/
-    ├── templates/
-    ├── resources/
-    └── i18n/
+你的wiki/
+├── LocalSettings.php
+├── includes/
+├── skins/
+│   └── Chroma/
+│       ├── skin.json
+│       ├── includes/
+│       ├── templates/
+│       ├── resources/
+│       └── i18n/
 ```
 
-::: warning 不要多套一层目录
-如果解压后是 `skins/Chroma/Chroma/skin.json`，MediaWiki 找不到皮肤。`skin.json` 必须在 `skins/Chroma/skin.json`。
+::: warning 不要多套一层
+如果变成 `skins/Chroma/Chroma/skin.json`，MediaWiki 找不到皮肤。`skin.json` 必须直接在 `skins/Chroma/` 下。
 :::
 
-## 启用
+## 第三步：启用
 
-在 `LocalSettings.php` 末尾加入：
+用文本编辑器打开 wiki 根目录的 `LocalSettings.php`，在**文件末尾**加上：
 
 ```php
 wfLoadSkin( 'Chroma' );
 $wgDefaultSkin = 'chroma';
 ```
 
-刷新页面。若皮肤没有生效：
+保存，然后刷新 wiki 页面。正常情况下会立刻变成 Chroma。
 
-- 检查 `skins/Chroma/skin.json` 是否存在；
-- 检查 PHP 错误日志；
-- 确认 `LocalSettings.php` 没有在 `wfLoadSkin` 前 `return`；
-- 运行 `php maintenance/run.php rebuildLocalisationCache`（或 `rebuildMessages`）后重试。
+如果 `LocalSettings.php` 末尾本来就有 `?>`，请把这两行放在 `?>` **前面**；更推荐直接删掉 `?>`，避免多余空白输出。
 
-## 可选：MobileFrontend 接管手机端
+## 装完没变化？
 
-安装 [MobileFrontend](https://www.mediawiki.org/wiki/Extension:MobileFrontend) 后设置：
+按顺序检查：
+
+1. **路径**：`skins/Chroma/skin.json` 是否存在？不是 `skins/Chroma/Chroma/skin.json`；
+2. **配置**：两行配置是否真的写进 `LocalSettings.php`，有没有拼错大小写；
+3. **权限**：PHP 进程是否至少能读取 `skins/Chroma`；
+4. **缓存**：刷新页面，或运行 `php maintenance/run.php purgeParserCache --age 0`；
+5. **错误日志**：看 PHP/Apache/Nginx 的 error log，通常会有明确原因。
+
+还可以访问 `Special:Version`，确认列表里是否出现 **Chroma** 皮肤。
+
+## 可选：让手机端也用 Chroma
+
+如果你想让手机访问也直接使用 Chroma：
+
+1. 安装 [MobileFrontend](https://www.mediawiki.org/wiki/Extension:MobileFrontend)；
+2. 在 `LocalSettings.php` 加：
 
 ```php
 wfLoadExtension( 'MobileFrontend' );
 $wgDefaultMobileSkin = 'chroma';
 ```
 
-手机 UA 会直接使用 Chroma 的响应式布局，不再依赖 MinervaNeue。详见 [移动端](mobile.md)。
+这样手机浏览器会使用 Chroma 的响应式布局，不再使用 MinervaNeue。详见 [移动端](mobile.md)。
 
-## 更新
+## 以后怎么更新
 
-1. 备份 `skins/Chroma` 和 `LocalSettings.php`；
-2. 用对应分支的新 ZIP 覆盖 `skins/Chroma`；
-3. 清理缓存（`php maintenance/run.php purgeParserCache --age 0`）；
-4. 访问 `Special:Version` 确认皮肤版本。
+1. 先备份 `skins/Chroma` 和 `LocalSettings.php`；
+2. 下载同一分支的新 ZIP；
+3. 用新文件覆盖 `skins/Chroma`；
+4. 清理缓存，刷新页面；
+5. 到 `Special:Version` 确认版本号。
 
-## 卸载
+## 怎么卸载
+
+1. 从 `LocalSettings.php` 删除：
 
 ```php
-// 从 LocalSettings.php 删除
 wfLoadSkin( 'Chroma' );
 $wgDefaultSkin = 'chroma';
 ```
 
-然后把 `$wgDefaultSkin` 改回 `vector` 等其他皮肤，并删除 `skins/Chroma`。
+2. 把 `$wgDefaultSkin` 改回其他皮肤（例如 `vector`）；
+3. 删除 `skins/Chroma` 文件夹。
+
+## 还是装不上？
+
+把下面信息发到 [GitHub Issues](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/issues)：
+
+- MediaWiki 版本；
+- PHP 版本；
+- Chroma 版本/分支；
+- 报错截图；
+- PHP 错误日志里的相关行。

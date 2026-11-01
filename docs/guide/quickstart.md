@@ -2,36 +2,42 @@
 title: 快速开始
 ---
 
-# 快速开始
+# 五分钟装好
 
-## 1. 选分支
+## 1. 确认版本
 
-只选与你的 MediaWiki 版本对应的分支，不要混用：
+打开 `Special:Version`，看 MediaWiki 是 1.43、1.45 还是 1.46。
 
-| MediaWiki | 分支 |
-|---|---|
-| 1.43 LTS | `REL1_43` |
-| 1.45 | `REL1_45` |
-| 1.46 | `REL1_46` |
+## 2. 下载对应 ZIP
 
-## 2. 放入 skins
+- 1.43 LTS → `v0.5.2-REL1_43`
+- 1.45 → `v0.5.2-REL1_45`
+- 1.46 → `v0.5.2-REL1_46`
 
-下载 ZIP，解压到 `skins/Chroma`，确认：
+下载地址在 [Releases](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases)。
+
+## 3. 放到 skins/Chroma
+
+把 ZIP 里的文件解压到：
 
 ```text
 skins/Chroma/skin.json
 ```
 
-## 3. 启用
+不是 `skins/Chroma/Chroma/skin.json`。
 
-`LocalSettings.php`：
+## 4. 在 LocalSettings.php 启用
+
+在文件末尾加：
 
 ```php
 wfLoadSkin( 'Chroma' );
 $wgDefaultSkin = 'chroma';
 ```
 
-## 4. 打开 Preferences
+保存，刷新页面。
+
+## 5. 打开设置看看
 
 登录后访问：
 
@@ -39,25 +45,18 @@ $wgDefaultSkin = 'chroma';
 Special:Preferences#mw-prefsection-rendering
 ```
 
-可以设置：
+在「外观」里可以改：
 
-- 配色方案：跟随系统 / 浅色 / 深色；
+- 主题色：teal / blue / green / violet；
+- 明暗：跟随系统 / 浅色 / 深色；
 - 布局：应用式 / 阅读式；
-- 阅读模式：默认开/关；
-- 主题色：teal / blue / green / violet。
+- 阅读模式。
 
-## 5. 试试顶栏菜单
-
-顶栏右侧有两个入口：
-
-- **显示选项**：布局、配色方案、阅读模式；
-- **账户**：个人工具、登录/创建账号。
-
-页面标题下方是页面标签（页面/讨论）和页面操作（阅读/编辑/历史）。
+顶栏右侧的「显示选项」也能快速切换。
 
 ## 下一步
 
-- [配置](configuration.md)
-- [界面与导航](usage.md)
-- [主题与配色](theming.md)
-- [移动端](mobile.md)
+- [安装](installation.md)：更完整的步骤和排错
+- [配置](configuration.md)：改默认值
+- [主题与配色](theming.md)：换色
+- [界面与导航](usage.md)：每个按钮是干什么的

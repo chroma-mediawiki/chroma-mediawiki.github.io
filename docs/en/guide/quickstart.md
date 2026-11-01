@@ -2,62 +2,61 @@
 title: Quick start
 ---
 
-# Quick start
+# Five-minute install
 
-## 1. Pick a branch
+## 1. Check your version
 
-Choose only the branch matching your MediaWiki version:
+Open `Special:Version` and note whether MediaWiki is 1.43, 1.45 or 1.46.
 
-| MediaWiki | Branch |
-|---|---|
-| 1.43 LTS | `REL1_43` |
-| 1.45 | `REL1_45` |
-| 1.46 | `REL1_46` |
+## 2. Download the matching ZIP
 
-## 2. Put it in skins
+- 1.43 LTS → `v0.5.2-REL1_43`
+- 1.45 → `v0.5.2-REL1_45`
+- 1.46 → `v0.5.2-REL1_46`
 
-Download the ZIP and extract it to `skins/Chroma`. Confirm:
+Download from [Releases](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases).
+
+## 3. Put it in skins/Chroma
+
+Extract the ZIP so that:
 
 ```text
 skins/Chroma/skin.json
 ```
 
-## 3. Enable
+exists — not `skins/Chroma/Chroma/skin.json`.
 
-In `LocalSettings.php`:
+## 4. Enable it in LocalSettings.php
+
+Add at the end:
 
 ```php
 wfLoadSkin( 'Chroma' );
 $wgDefaultSkin = 'chroma';
 ```
 
-## 4. Open Preferences
+Save and refresh.
 
-After logging in, visit:
+## 5. Open Preferences
+
+Log in and visit:
 
 ```text
 Special:Preferences#mw-prefsection-rendering
 ```
 
-You can set:
+Under Appearance you can change:
 
-- color scheme: system / light / dark;
+- theme color: teal / blue / green / violet;
+- scheme: system / light / dark;
 - layout: app / reading;
-- reading mode: on / off;
-- seed: teal / blue / green / violet.
+- reading mode.
 
-## 5. Try the top bar
-
-The top bar has two menus:
-
-- **Display options**: layout, color scheme and reading mode;
-- **Account**: personal tools, login and account creation.
-
-Below the page title are page tabs (Page / Discussion) and page actions (Read / Edit / History).
+The top-bar **Display options** menu has the same quick switches.
 
 ## Next
 
-- [Configuration](configuration.md)
-- [Interface & navigation](usage.md)
-- [Themes & color](theming.md)
-- [Mobile](mobile.md)
+- [Installation](installation.md): full steps and troubleshooting
+- [Configuration](configuration.md): change defaults
+- [Themes & color](theming.md): colors
+- [Interface & navigation](usage.md): what each control does

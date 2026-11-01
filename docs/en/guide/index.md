@@ -1,51 +1,57 @@
 ---
-title: Overview
+title: Getting started
 ---
 
-# What is Chroma
+# New to Chroma?
 
-Chroma is a MediaWiki skin built around Material Design 3-style **design tokens**: color roles, type scale, shape, elevation, motion and state layers. On top of MediaWiki's server-rendered structure it adds an app layout, a reading layout and a mobile takeover.
+Chroma is a MediaWiki skin. Once installed, your wiki gets:
 
-It is not a complete Material 3 component library, and it does not replace MediaWiki's content model. Pages, talk pages, history, editors and extensions remain powered by MediaWiki; the skin owns presentation, hierarchy and reading rhythm.
+- an app-like interface with a top bar, search, navigation drawer and table of contents;
+- a reading layout for long articles;
+- light and dark themes with four color presets;
+- a mobile layout that replaces MinervaNeue.
 
-## Why it exists
+You do not need to know PHP or Node.js. Installation is three steps:
 
-- Default MediaWiki skins are utilitarian, with limited hierarchy and reading comfort;
-- colors, type, radii and dark mode are scattered across the UI;
-- mobile usually falls back to MinervaNeue, so desktop and mobile speak different visual languages.
+1. Download the package that matches your MediaWiki version;
+2. Put the files in `skins/Chroma`;
+3. Add two lines to `LocalSettings.php`.
 
-Chroma collects color, type, shape and state into one token set, then applies it through two layouts and a mobile takeover.
+## Check your MediaWiki version
 
-## What you get
+Log in and open `Special:Version`. Look at the **MediaWiki** version.
 
-| Capability | Details |
+| Your MediaWiki | Download |
 |---|---|
-| MD3 tokens | Seed `#006A6A` by default; four presets; light, dark and system modes |
-| Two layouts | App (top bar + drawer) and reading layout |
-| Reading mode | Hides the drawer, TOC and page actions; centers content |
-| Mobile | MobileFrontend full takeover; mobile UAs use Chroma directly |
-| Extensions | 31 Tier 1 extensions configured on 1.46; 30 on 1.43 and 1.45 |
-| Search | Core `mediawiki.searchSuggest` suggestions |
-| Special pages | Login, history, diff and Preferences share Material surfaces |
+| 1.43.x | [v0.5.2-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_43) |
+| 1.45.x | [v0.5.2-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_45) |
+| 1.46.x | [v0.5.2-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_46) |
 
-## Quick start
+Do not mix branches: a 1.46 package will not work on 1.43.
 
-```php
-wfLoadSkin( 'Chroma' );
-$wgDefaultSkin = 'chroma';
+## Where to go next
 
-// Optional: MobileFrontend takeover
-$wgDefaultMobileSkin = 'chroma';
-```
+| I want to… | Read |
+|---|---|
+| Install | [Installation](installation.md) |
+| Change colors / dark mode | [Themes & color](theming.md) |
+| Change the default layout | [Configuration](configuration.md) |
+| Learn the interface | [Interface & navigation](usage.md) |
+| Use it on mobile | [Mobile](mobile.md) |
+| Fix an install problem | [FAQ](faq.md) |
 
-Start with [Installation](installation.md), then read [Configuration](configuration.md) and [Theming](theming.md).
+## About the version
 
-## Versions
+This documentation targets **v0.5.2**. Chroma maintains three lines:
 
-This documentation targets **v0.5.2**. Three maintained lines:
+- MediaWiki **1.43 LTS** → `REL1_43`
+- MediaWiki **1.45** → `REL1_45`
+- MediaWiki **1.46** → `REL1_46`
 
-- MediaWiki 1.43 LTS → `REL1_43`
-- MediaWiki 1.45 → `REL1_45`
-- MediaWiki 1.46 → `REL1_46`
+Each branch pins its compatible MediaWiki range in `skin.json`.
 
-Each branch pins `requires.MediaWiki` in `skin.json`; do not mix branches.
+## Is it “full Material 3”?
+
+Chroma uses Material 3-style **design tokens** (color roles, type scale, shape, elevation, motion) and implements some Expressive patterns. It is not an official Google skin and not a complete Material 3 component library.
+
+It changes how the wiki looks and reads; it does not change MediaWiki's pages, editing, history or extensions.

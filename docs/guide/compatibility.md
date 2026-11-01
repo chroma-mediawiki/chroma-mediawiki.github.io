@@ -4,56 +4,54 @@ title: 兼容性
 
 # 兼容性
 
-## MediaWiki 版本
+## 支持哪些 MediaWiki
 
-Chroma 按 MediaWiki 线维护独立分支：
-
-| MediaWiki | 分支 | 最低 PHP |
+| MediaWiki | 分支 | 说明 |
 |---|---|---|
-| 1.43 LTS | `REL1_43` | 8.1 |
-| 1.45 | `REL1_45` | 8.2 |
-| 1.46 | `REL1_46` | 8.3 |
+| 1.43 LTS | `REL1_43` | 长期支持线 |
+| 1.45 | `REL1_45` | 稳定线 |
+| 1.46 | `REL1_46` | 当前线 |
 
-`skin.json` 的 `requires.MediaWiki` 已按分支锁定；不要把 1.46 的分支装到 1.43。
+请使用对应的 Release 包。1.46 的包不要装到 1.43 上，反之亦然。
 
-## 扩展
+不支持 MediaWiki 1.44（不是 LTS，没有单独分支）。
 
-### 1.46
+## 支持哪些扩展
 
-本地 1.46.0 harness 配置了 31 个 Tier 1 扩展（AbuseFilter 因 Equivset 依赖未启用），验证了 Cite、Math、SyntaxHighlight、InputBox、CategoryTree、Poem、ParserFunctions、Echo、Linter 等界面。
+Chroma 本身只改外观和布局，不修改扩展输出。我们实际测试过：
 
-### 1.43 / 1.45
+- **Cite**：`<ref>`、引用列表、脚注；
+- **Math**：`<math>`；
+- **SyntaxHighlight**：代码块；
+- **ParserFunctions**：`#if` 等；
+- **Poem**：`<poem>`；
+- **InputBox**、**CategoryTree**；
+- 登录、历史、版本差异、Preferences 等特殊页；
+- 1.46 下的 VisualEditor / DiscussionTools（本地测试环境）。
 
-两个版本各安装了 30 个 Tier 1 扩展，矩阵页覆盖：
-
-- `<ref>` / 引用列表；
-- `<math>`（native MathML）；
-- `<syntaxhighlight>`；
-- `&#123;&#123;#if:&#125;&#125;`；
-- `<poem>`；
-- `<inputbox>`。
-
-扩展清单、限制和截图见皮肤仓库的 [兼容性页面](/guide/compatibility)。
+1.46 测试环境配置了 31 个 Tier 1 扩展；1.43 / 1.45 各安装 30 个。不是每个社区扩展都逐项验证过，遇到问题请带扩展名和版本报告。
 
 ## 已知限制
 
-- **AbuseFilter**：测试环境缺少 `Wikimedia\Equivset`，未启用；这不是皮肤代码问题。
-- **VisualEditor / DiscussionTools**：需要 VisualEditor 的 `lib/ve` 子模块资源，只在 1.46 harness 完整验证。
-- **Math**：本地使用 `native` MathML；`mathml` 模式需要 RESTBase/Mathoid。
-- **扩展自动化**：当前没有按扩展的自动化 Playwright 套件，矩阵是手动验证。
-- **任意 seed**：只支持四套预设，不支持用户任意输入颜色。
-- **完整 MD3**：Chroma 是 MD3 风格 token 层 + 部分 Expressive 模式，不是完整 Material 3 组件库。
+- **AbuseFilter**：测试环境缺少 `Wikimedia\Equivset`，未启用；不是皮肤导致。
+- **Math**：本地使用 native MathML；`mathml` 模式需要 RESTBase/Mathoid。
+- **任意主题色**：只支持四种预设，不支持任意 seed。
+- **完整 Material 3**：Chroma 使用 MD3 风格的 token，并实现部分 Expressive 视觉，不是完整 Material 3 组件库。
+- **自动化测试**：当前没有按扩展的自动化测试套件，扩展矩阵是手动验证。
 
 ## 浏览器
 
-支持当前两个版本的 Chrome、Edge、Firefox、Safari，不支持 IE。
+支持当前版本的 Chrome、Edge、Firefox、Safari。不支持 IE。
 
-## 报告问题
+## 遇到兼容问题怎么报告
 
 请附上：
 
 - MediaWiki 版本；
-- Chroma 版本 / 分支；
+- Chroma 版本和分支；
 - PHP 版本；
-- 扩展名与版本；
-- 复现页面、截图、浏览器 console 与 PHP 错误日志。
+- 扩展名称与版本；
+- 出问题的页面链接或截图；
+- 浏览器 console 和 PHP 错误日志。
+
+到 [GitHub Issues](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/issues) 提交。

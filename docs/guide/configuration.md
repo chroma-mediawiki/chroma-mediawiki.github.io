@@ -4,88 +4,111 @@ title: 配置
 
 # 配置
 
-所有配置都写在 `LocalSettings.php`。Chroma 不会写数据库，也不依赖额外扩展。
+Chroma 的所有配置都写在 wiki 根目录的 `LocalSettings.php` 里。改完保存、刷新页面即可，不需要改数据库，也不需要重启服务器。
 
-## 默认值
+## 先看：你最可能想改什么
+
+| 我想… | 改这个 | 填什么 |
+|---|---|---|
+| 换默认主题色 | `$wgChromaDefaultSeed` | `#006A6A` / `#0061A4` / `#386A20` / `#6750A4` |
+| 默认用深色 | `$wgChromaDefaultScheme` | `dark` / `light` / `system` |
+| 默认用阅读布局 | `$wgChromaDefaultLayout` | `reading` / `app` |
+| 长文默认进入阅读模式 | `$wgChromaDefaultReadingMode` | `true` / `false` |
+| 禁止用户自己改主题 | `$wgChromaAllowUserColor` | `false` |
+| 禁止用户自己改布局 | `$wgChromaAllowUserLayout` | `false` |
+| 禁止用户自己改阅读模式 | `$wgChromaAllowUserReadingMode` | `false` |
+
+## 最常用：换主题色
+
+在 `LocalSettings.php` 加：
 
 ```php
-// 默认 seed，生成主题色板
-$wgChromaDefaultSeed = '#006A6A';
+$wgChromaDefaultSeed = '#0061A4'; // 蓝色
+```
 
-// 'system' | 'light' | 'dark'
-$wgChromaDefaultScheme = 'system';
+Chroma 目前只支持四种预设：
 
-// 'app' | 'reading'
-$wgChromaDefaultLayout = 'app';
+| 颜色 | 值 |
+|---|---|
+| Teal（默认） | `#006A6A` |
+| Blue | `#0061A4` |
+| Green | `#386A20` |
+| Violet | `#6750A4` |
 
-// 默认开启阅读模式（仅内容页生效）
-$wgChromaDefaultReadingMode = false;
+填其他颜色会回退到 Teal。想做更细的颜色定制，见 [主题与配色](theming.md)。
 
-// 允许用户在 Preferences 覆盖
+## 默认明暗模式
+
+```php
+$wgChromaDefaultScheme = 'dark';
+```
+
+可选：
+
+- `system`：跟随访客的操作系统；
+- `light`：浅色；
+- `dark`：深色。
+
+这只是一个默认值。如果允许用户覆盖，访客仍然可以在顶栏或 Preferences 里自己切换。
+
+## 默认布局
+
+```php
+$wgChromaDefaultLayout = 'reading';
+```
+
+- `app`：默认的应用式布局。有左侧导航、顶栏、右侧目录。
+- `reading`：阅读布局。隐藏左侧导航和目录，正文居中，更适合长文。
+
+访客可以用顶栏的「显示选项」切换。
+
+## 默认阅读模式
+
+```php
+$wgChromaDefaultReadingMode = true;
+```
+
+设为 `true` 后，文章页默认进入阅读模式：隐藏目录和页面操作，正文限宽。`Special:` 特殊页面不受影响。
+
+## 允许/禁止用户覆盖
+
+```php
 $wgChromaAllowUserColor = true;
 $wgChromaAllowUserLayout = true;
 $wgChromaAllowUserReadingMode = true;
 ```
 
-## `$wgChromaDefaultSeed`
+设为 `false` 后，用户在 Preferences 里保存的值不会生效，站点始终使用管理员默认值。
 
-支持四套预设：
+公开 wiki 建议保持 `true`；内部 wiki 或需要统一视觉的站点可以设为 `false`。
 
-| 值 | 名称 |
-|---|---|
-| `#006A6A` | teal（默认） |
-| `#0061A4` | blue |
-| `#386A20` | green |
-| `#6750A4` | violet |
+## 完整配置示例
 
-目前**不支持任意 seed**：如果填了不在预设里的颜色，会回退到 teal。预设色板在构建时生成到 `resources/styles/tokens-presets.css`。
-
-## `$wgChromaDefaultScheme`
-
-- `system`：跟随 `prefers-color-scheme`；
-- `light`：浅色；
-- `dark`：深色。
-
-选择结果会写成 `data-chroma-theme`，CSS 用 token 切换对应色板。
-
-## `$wgChromaDefaultLayout`
-
-- `app`：应用式，顶栏 + 抽屉 + 正文/TOC；
-- `reading`：阅读式，隐藏抽屉和 TOC，正文居中。
-
-用户可以在顶栏「显示选项」或 Preferences 中切换。
-
-## `$wgChromaDefaultReadingMode`
-
-为 `true` 时，内容页默认进入阅读模式：隐藏 TOC、页面操作，正文限宽居中。Special 页不受影响。
-
-## 用户覆盖
-
-三个 `$wgChromaAllowUser*` 控制 Preferences 里是否允许用户覆盖。设为 `false` 时，用户保存的值不会生效，站点使用管理员默认值。
-
-::: tip 推荐
-公开 wiki 建议允许用户覆盖主题与布局；内部 wiki 可以用管理员默认值锁定视觉。
-:::
-
-## 完整示例
+把下面这段放在 `LocalSettings.php` 的皮肤配置区域即可：
 
 ```php
 wfLoadSkin( 'Chroma' );
 $wgDefaultSkin = 'chroma';
 
+// 主题色：teal / blue / green / violet
 $wgChromaDefaultSeed = '#006A6A';
+
+// system / light / dark
 $wgChromaDefaultScheme = 'system';
+
+// app / reading
 $wgChromaDefaultLayout = 'app';
+
+// 文章页默认阅读模式
 $wgChromaDefaultReadingMode = false;
+
+// 是否允许用户在 Preferences 里覆盖
 $wgChromaAllowUserColor = true;
 $wgChromaAllowUserLayout = true;
 $wgChromaAllowUserReadingMode = true;
-
-// MobileFrontend 全接管
-// $wgDefaultMobileSkin = 'chroma';
 ```
 
-## Logo
+## Logo 和 favicon
 
 Chroma 只在配置了真实自定义 `$wgLogos` 时显示 logo：
 
@@ -96,11 +119,17 @@ $wgLogos = [
 ];
 ```
 
-没有自定义 `$wgLogos` 时只显示站点名，不会生成首字母占位图标。`$wgFavicon` 仍然由 MediaWiki 核心处理。
+没有配置 `$wgLogos` 时，Chroma 只显示站点名，**不会**自动生成首字母图标。
 
-## 站点级 CSS
+站点图标由 MediaWiki 的 `$wgFavicon` 控制：
 
-需要额外覆盖时，使用 `MediaWiki:Chroma.css` 或站点 CSS：
+```php
+$wgFavicon = "$wgResourceBasePath/favicon.ico";
+```
+
+## 加一点自定义 CSS
+
+需要微调颜色时，可以在 `MediaWiki:Chroma.css` 写：
 
 ```css
 :root {
@@ -108,4 +137,17 @@ $wgLogos = [
 }
 ```
 
-不要直接改 `resources/styles/` 里的生成文件；它们会在 token 重新生成时被覆盖。
+不建议直接改 `skins/Chroma/resources/styles/` 里的文件，因为更新皮肤时会被覆盖。
+
+## 改完没生效？
+
+1. 确认修改的是 wiki 根目录的 `LocalSettings.php`，不是皮肤目录里的文件；
+2. 确认 PHP 语法没有错（少分号、少引号都会导致整站白屏）；
+3. 刷新页面，或清理缓存；
+4. 如果你设置了 `$wgChromaAllowUser* = false`，用户之前保存的偏好可能还会短暂显示；退出重登或清理缓存后再看。
+
+## 相关页面
+
+- [主题与配色](theming.md)：换色、深色模式、自定义 CSS
+- [界面与导航](usage.md)：顶栏、目录、阅读模式怎么用
+- [移动端](mobile.md)：MobileFrontend 全接管

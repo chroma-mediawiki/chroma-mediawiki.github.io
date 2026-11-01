@@ -1,51 +1,57 @@
 ---
-title: 概览
+title: 开始使用
 ---
 
-# Chroma 是什么
+# 第一次用 Chroma
 
-Chroma 是一套面向 MediaWiki 的皮肤，使用 Material Design 3 风格的 **design token**（色彩角色、字阶、形状、海拔、动效与状态层），并在 MediaWiki 的服务器渲染结构上实现应用式布局、阅读布局和移动端接管。
+Chroma 是一套 MediaWiki 皮肤。装好之后，你的 wiki 会变成：
 
-它不是完整的 Material 3 组件库，也不重造 MediaWiki 的内容模型。页面、讨论、历史、编辑器、扩展仍由 MediaWiki 驱动；皮肤负责呈现、层级和阅读节奏。
+- **应用式界面**：顶部栏、搜索、导航抽屉、右侧目录；
+- **更适合长文的阅读布局**：正文居中，工具后退；
+- **自带浅色/深色主题**，还能选四种主题色；
+- **手机端直接使用 Chroma**，不再套 MinervaNeue。
 
-## 它解决什么问题
+你不需要会写 PHP，也不需要 Node.js。安装只需要三步：
 
-- MediaWiki 默认皮肤偏工具化，阅读体验和视觉层级有限；
-- 配色、字号、圆角、暗色模式分散在各处，难以统一；
-- 手机端通常交给 MinervaNeue，桌面与移动的视觉语言断裂。
+1. 下载和你的 MediaWiki 版本对应的安装包；
+2. 把文件放进 `skins/Chroma`；
+3. 在 `LocalSettings.php` 里加两行配置。
 
-Chroma 用一套 token 把颜色、字阶、形状和状态收拢起来，然后用两种布局和移动端接管，把这些 token 落到 wiki 的阅读与编辑界面里。
+## 先确认你的 MediaWiki 版本
 
-## 你会得到
+登录 wiki，打开 `Special:Version`，看第一行 **MediaWiki** 的版本号。
 
-| 能力 | 说明 |
+| 你的 MediaWiki | 下载 |
 |---|---|
-| MD3 token | 默认 seed `#006A6A`，四套预设，浅色/深色/跟随系统 |
-| 两种布局 | 应用式（顶栏 + 抽屉）与阅读式 |
-| 阅读模式 | 隐藏抽屉、目录和页面操作，正文居中 |
-| 移动端 | MobileFrontend 全接管，手机 UA 直接使用 Chroma |
-| 扩展兼容 | 1.46 配置 31 个 Tier 1 扩展；1.43/1.45 各 30 个矩阵 |
-| 搜索 | 核心 `mediawiki.searchSuggest` 联想 |
-| 特殊页 | 登录、历史、差异、偏好设置统一 surface |
+| 1.43.x | [v0.5.2-REL1_43](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_43) |
+| 1.45.x | [v0.5.2-REL1_45](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_45) |
+| 1.46.x | [v0.5.2-REL1_46](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/releases/tag/v0.5.2-REL1_46) |
 
-## 快速开始
+不要混用版本：1.46 的分支装到 1.43 上会报错。
 
-```php
-wfLoadSkin( 'Chroma' );
-$wgDefaultSkin = 'chroma';
+## 接下来读什么
 
-// 可选：MobileFrontend 全接管
-$wgDefaultMobileSkin = 'chroma';
-```
+| 你想… | 看这里 |
+|---|---|
+| 安装 | [安装步骤](installation.md) |
+| 改主题色、深浅色 | [主题与配色](theming.md) |
+| 改默认布局、阅读模式 | [配置](configuration.md) |
+| 了解顶栏、目录、搜索怎么用 | [界面与导航](usage.md) |
+| 手机访问 | [移动端](mobile.md) |
+| 装不上/没变化 | [常见问题](faq.md) |
 
-从 [安装](installation.md) 开始，或看 [配置](configuration.md) 和 [主题](theming.md)。
+## 关于「版本」
 
-## 版本
+当前文档对应 **v0.5.2**。Chroma 同时维护三条线：
 
-当前文档对应 **v0.5.2**。三条维护线：
+- MediaWiki **1.43 LTS** → 分支 `REL1_43`
+- MediaWiki **1.45** → 分支 `REL1_45`
+- MediaWiki **1.46** → 分支 `REL1_46`
 
-- MediaWiki 1.43 LTS → `REL1_43`
-- MediaWiki 1.45 → `REL1_45`
-- MediaWiki 1.46 → `REL1_46`
+每条线的 `skin.json` 都写死了兼容的 MediaWiki 范围，所以下载对应版本即可。
 
-三条分支分别锁定 `skin.json` 的 `requires.MediaWiki`，不要跨分支合并。
+## 它和“完整 Material 3”是什么关系？
+
+Chroma 使用了 Material 3 风格的 **设计 token**（颜色角色、字阶、圆角、阴影、动效），并实现了其中一部分 Expressive 风格；它不是 Google 官方的 MediaWiki 皮肤，也不是完整的 Material 3 组件库。
+
+皮肤只改变“看起来怎么样、读起来怎么样”，不会改变 MediaWiki 的页面、编辑、历史和扩展机制。
