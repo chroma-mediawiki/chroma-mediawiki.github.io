@@ -22,6 +22,9 @@ hero:
     - theme: alt
       text: QQ
       link: https://qm.qq.com/q/zSaZRWS4eY
+    - theme: alt
+      text: Bilibili
+      link: https://b23.tv/QiGlLcm
 
 ---
 <HomePage />
