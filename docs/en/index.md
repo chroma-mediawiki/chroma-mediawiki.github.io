@@ -19,6 +19,9 @@ hero:
     - theme: alt
       text: GitHub
       link: https://github.com/chroma-mediawiki/mediawiki-skins-Chroma
+    - theme: alt
+      text: QQ
+      link: https://qm.qq.com/q/zSaZRWS4eY
 
 ---
 <HomePageEn />

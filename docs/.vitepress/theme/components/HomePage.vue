@@ -136,7 +136,6 @@ $wgDefaultMobileSkin = 'chroma';</code></pre>
 			<div class="cta-actions">
 				<a class="cta-button cta-button--primary" :href="link('/guide/installation')">开始使用</a>
 				<a class="cta-button cta-button--ghost" :href="repo" target="_blank" rel="noreferrer">GitHub</a>
-				<a class="cta-button cta-button--ghost" href="https://qm.qq.com/q/zSaZRWS4eY" target="_blank" rel="noreferrer">QQ 群</a>
 			</div>
 		</section>
 	</div>

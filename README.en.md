@@ -14,7 +14,7 @@
   <a href="https://chroma-mediawiki.github.io/chroma-docs/en/">English site</a> ·
   <a href="https://chroma-mediawiki.github.io/chroma-docs/">Chinese site</a> ·
   <a href="https://github.com/chroma-mediawiki/mediawiki-skins-Chroma">Skin repository</a> ·
-  <a href="https://qm.qq.com/q/zSaZRWS4eY">QQ group</a>
+  <a href="https://qm.qq.com/q/zSaZRWS4eY">QQ</a>
 </p>
 
 <p align="center">
@@ -22,7 +22,7 @@
   <a href="https://github.com/chroma-mediawiki/chroma-docs/actions/workflows/pages.yml"><img src="https://github.com/chroma-mediawiki/chroma-docs/actions/workflows/pages.yml/badge.svg" alt="Deploy docs"></a>
   <a href="https://github.com/chroma-mediawiki/chroma-docs/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg" alt="License"></a>
   <a href="https://vitepress.dev/"><img src="https://img.shields.io/badge/built%20with-VitePress-006a6a.svg" alt="VitePress"></a>
-  <a href="https://qm.qq.com/q/zSaZRWS4eY"><img src="https://img.shields.io/badge/QQ%20group-join-12B7F5.svg" alt="QQ group"></a>
+  <a href="https://qm.qq.com/q/zSaZRWS4eY"><img src="https://img.shields.io/badge/QQ-join-12B7F5.svg" alt="QQ"></a>
 </p>
 
 <p align="center">
