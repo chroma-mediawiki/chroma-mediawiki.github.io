@@ -26,7 +26,6 @@ includes/
 templates/
 resources/
 i18n/
-docs/
 screenshots/   # README 图片
 LICENSE
 NOTICE

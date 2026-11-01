@@ -25,4 +25,4 @@ title: Branches & versions
 2. set `requires.MediaWiki` in `skin.json`;
 3. adjust `menus`, Codex/OOUI bridge and minimum PHP;
 4. verify install, edit, history, Preferences and mobile on the real version;
-5. update this page and the skin repo's `docs/COMPAT-MATRIX.md`.
+5. update this page and the [compatibility](/en/guide/compatibility) page.

@@ -19,7 +19,6 @@ resources/
   scripts/chroma.js      drawer, theme, layout, reading mode, scroll-spy, snackbar
 i18n/                    en / qqq / zh-hans / zh-hant
 tools/                   token and preset generators
-docs/                    docs; the public site lives in chroma-docs
 ```
 
 ## Rendering flow

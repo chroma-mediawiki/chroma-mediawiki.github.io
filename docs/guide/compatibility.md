@@ -33,7 +33,7 @@ Chroma 按 MediaWiki 线维护独立分支：
 - `<poem>`；
 - `<inputbox>`。
 
-扩展清单、限制和截图见皮肤仓库的 [COMPATIBILITY.md](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/blob/main/docs/COMPATIBILITY.md)。
+扩展清单、限制和截图见皮肤仓库的 [兼容性页面](/guide/compatibility)。
 
 ## 已知限制
 

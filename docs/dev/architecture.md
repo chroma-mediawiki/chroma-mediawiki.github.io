@@ -19,7 +19,6 @@ resources/
   scripts/chroma.js      抽屉、主题、布局、阅读模式、scroll-spy、snackbar
 i18n/                    en / qqq / zh-hans / zh-hant
 tools/                   token / preset 生成器
-docs/                    本仓库外的开发文档；皮肤仓库内也有 docs
 ```
 
 ## 渲染链路

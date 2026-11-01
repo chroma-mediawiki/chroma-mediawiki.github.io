@@ -25,4 +25,4 @@ title: 分支与版本
 2. 修改 `skin.json` 的 `requires.MediaWiki`；
 3. 按目标版本调整 `menus`、Codex/OOUI 桥接、PHP 最低版本；
 4. 在 1.xx 真机跑安装、编辑、历史、Preferences、移动端；
-5. 更新本页和皮肤仓库的 `docs/COMPAT-MATRIX.md`。
+5. 更新本页和官网的[兼容性](/guide/compatibility)页面。

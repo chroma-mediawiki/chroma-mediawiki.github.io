@@ -33,7 +33,7 @@ Each installs 30 Tier 1 extensions. The matrix covers:
 - `<poem>`;
 - `<inputbox>`.
 
-The full extension list and limitations are in the skin repository's [COMPATIBILITY.md](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma/blob/main/docs/COMPATIBILITY.md).
+The full extension list and limitations are in the skin repository's the [compatibility page](/en/guide/compatibility).
 
 ## Known limitations
 
