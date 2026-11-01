@@ -47,4 +47,15 @@ No. Maintained lines are 1.43 LTS, 1.45 and 1.46; 1.44 is not an LTS and has no 
 
 ## Can I use it commercially?
 
-The skin is GPL-3.0-or-later. Third-party licenses are in `NOTICE`. Chroma is not affiliated with Google; Material Design / Material 3 are trademarks of Google LLC.
+**Yes.**
+
+GPL-3.0-or-later permits commercial use: internal company wikis, client projects, hosted services, and paid deployment or customization. You do not need to pay Chroma or ask for permission.
+
+The important distinction is **use vs. distribution**:
+
+- **Running it yourself / on your own servers** — including a paid SaaS — does not by itself require you to publish your modifications;
+- **Distributing Chroma or a modified version to customers or the public** — you must provide the corresponding source under the GPL, keep copyright and license notices, and license the derivative work under the GPL;
+- You may not remove `LICENSE` / `NOTICE` or imply endorsement by Google or Chroma;
+- The software is provided as-is, without warranty.
+
+If you need to distribute a modified Chroma inside a **closed-source** product, the GPL does not allow that directly; get legal review or separate permission. Third-party components have their own licenses; see `NOTICE`.
