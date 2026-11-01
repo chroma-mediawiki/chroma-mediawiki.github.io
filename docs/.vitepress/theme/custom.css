@@ -1,0 +1,123 @@
+:root {
+	--vp-c-brand-1: #006a6a;
+	--vp-c-brand-2: #005a5a;
+	--vp-c-brand-3: #007f7f;
+	--vp-c-brand-soft: rgba(0, 106, 106, .12);
+
+	--vp-c-bg: #f6fbfa;
+	--vp-c-bg-alt: #eef6f5;
+	--vp-c-bg-elv: #ffffff;
+	--vp-c-bg-soft: #e9f3f2;
+	--vp-c-border: #d4e3e1;
+	--vp-c-divider: #dce9e7;
+	--vp-c-text-1: #17201f;
+	--vp-c-text-2: #4b5a58;
+	--vp-c-text-3: #75827f;
+
+	--chroma-surface: #f6fbfa;
+	--chroma-surface-container: #eaf1f0;
+	--chroma-outline: #c9d8d6;
+
+	--vp-font-family-base: "Roboto Flex", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+	--vp-font-family-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+
+	--vp-home-hero-name-color: transparent;
+	--vp-home-hero-name-background: linear-gradient(120deg, #006a6a 20%, #00a6a0 80%);
+	--vp-home-hero-image-background-image: radial-gradient(circle at 50% 45%, rgba(0, 106, 106, .24), transparent 62%);
+	--vp-home-hero-image-filter: blur(24px);
+}
+
+.dark {
+	--vp-c-brand-1: #7fe3df;
+	--vp-c-brand-2: #62d3ce;
+	--vp-c-brand-3: #9cf2ef;
+	--vp-c-brand-soft: rgba(127, 227, 223, .13);
+
+	--vp-c-bg: #0e1413;
+	--vp-c-bg-alt: #121a19;
+	--vp-c-bg-elv: #17201f;
+	--vp-c-bg-soft: #192321;
+	--vp-c-border: #2a3836;
+	--vp-c-divider: #253431;
+	--vp-c-text-1: #e6f0ee;
+	--vp-c-text-2: #b1c2bf;
+	--vp-c-text-3: #7f918e;
+
+	--chroma-surface: #0e1413;
+	--chroma-surface-container: #17201f;
+	--chroma-outline: #2a3836;
+}
+
+html { scroll-behavior: smooth; }
+body { font-feature-settings: "kern" 1, "liga" 1; }
+::selection { background: var(--vp-c-brand-soft); }
+
+.VPNav {
+	background: color-mix(in srgb, var(--vp-c-bg) 88%, transparent) !important;
+	backdrop-filter: blur(16px);
+	border-bottom: 1px solid var(--vp-c-divider);
+}
+.VPNavBarTitle .title { font-weight: 700; letter-spacing: -.02em; }
+.VPNavBarSearch .DocSearch-Button,
+.VPNavBarSearch .VPNavBarSearchButton {
+	border-radius: 999px;
+	background: var(--vp-c-bg-soft);
+}
+
+.VPDoc h1, .VPDoc h2, .VPDoc h3 { letter-spacing: -.025em; }
+.VPDoc h1 { font-size: clamp(2rem, 4vw, 2.75rem); }
+.VPDoc a { text-underline-offset: 3px; }
+.VPSidebar { border-right: 1px solid var(--vp-c-divider); }
+.VPSidebarItem.is-active > .item .link .text { color: var(--vp-c-brand-1); font-weight: 600; }
+.vp-doc table { display: table; width: 100%; border-radius: 12px; overflow: hidden; }
+.vp-doc th { background: var(--vp-c-bg-soft); }
+
+.VPHero { padding-top: 88px; padding-bottom: 36px; }
+.VPHero .name { font-size: clamp(3rem, 7vw, 5.2rem); letter-spacing: -.055em; }
+.VPHero .text { margin-top: 12px; font-size: clamp(1.6rem, 3.2vw, 2.4rem); letter-spacing: -.04em; }
+.VPHero .tagline { max-width: 560px; font-size: 17px; line-height: 1.75; }
+.VPHero .actions { margin-top: 28px; }
+.VPButton { border-radius: 999px !important; padding-inline: 24px !important; }
+.VPButton.brand { background: var(--vp-c-brand-1); border-color: var(--vp-c-brand-1); }
+.VPButton.alt { background: var(--vp-c-bg-soft); border-color: var(--vp-c-border); }
+.VPHero .image-container { transform: translate(0, 0); }
+.VPHero .image-src {
+	max-width: 430px;
+	max-height: 300px;
+	border: 1px solid var(--vp-c-border);
+	border-radius: 24px;
+	object-fit: cover;
+	object-position: top;
+	box-shadow: 0 24px 70px rgba(0, 80, 80, .22);
+}
+
+@media (min-width: 960px) {
+	.VPHero .container { align-items: center; }
+	.VPHero .main { max-width: 620px; }
+}
+
+@media (max-width: 640px) {
+	.VPHero { padding-top: 48px; }
+	.VPHero .image-src { max-height: 220px; }
+	.VPDoc h1 { font-size: 2rem; }
+}
+
+@media (max-width: 960px) {
+	.VPHero .container { flex-direction: column; }
+	.VPHero .main { order: -1; }
+	.VPHero .image { width: 100%; max-width: 100%; margin-top: 20px; }
+	.VPHero .image-container { width: 100%; max-width: 100%; height: auto; transform: none; }
+	.VPHero .image-src { max-width: 100%; max-height: 190px; margin: 0 auto; }
+}
+
+@media (max-width: 640px) {
+	.VPHero .name { font-size: 3.2rem; }
+	.VPHero .text { font-size: 1.7rem; }
+	.VPHero .tagline { font-size: 15px; }
+	.VPHero .actions { flex-wrap: wrap; }
+	.VPHero .action { flex: 1 1 auto; }
+}
+
+@media (max-width: 960px) {
+	.VPHero .image { display: none; }
+}
