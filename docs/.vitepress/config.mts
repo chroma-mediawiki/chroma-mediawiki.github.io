@@ -11,7 +11,8 @@ const zhTheme = {
 		{ text: '开发', link: '/dev/', activeMatch: '/dev/' },
 		{ text: '兼容性', link: '/guide/compatibility' },
 		{ text: '更新日志', link: '/changelog' },
-		{ text: 'QQ', link: 'https://qm.qq.com/q/zSaZRWS4eY' }
+		{ text: 'QQ', link: 'https://qm.qq.com/q/zSaZRWS4eY' },
+		{ text: 'Bilibili', link: 'https://b23.tv/QiGlLcm' }
 	],
 	sidebar: {
 		'/guide/': [
@@ -96,7 +97,8 @@ const enTheme = {
 		{ text: 'Development', link: '/en/dev/', activeMatch: '/en/dev/' },
 		{ text: 'Compatibility', link: '/en/guide/compatibility' },
 		{ text: 'Changelog', link: '/en/changelog' },
-		{ text: 'QQ', link: 'https://qm.qq.com/q/zSaZRWS4eY' }
+		{ text: 'QQ', link: 'https://qm.qq.com/q/zSaZRWS4eY' },
+		{ text: 'Bilibili', link: 'https://b23.tv/QiGlLcm' }
 	],
 	sidebar: {
 		'/en/guide/': [
@@ -189,7 +191,8 @@ export default defineConfig({
 		siteTitle: 'Chroma',
 		socialLinks: [
 			{ icon: 'github', link: repo },
-			{ icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5c-2.9 0-4.7 2.1-4.7 5.1 0 1 .2 1.9.6 2.7-1 1.5-1.6 3.4-1.6 5.1 0 1.8.8 2.9 2 2.9.7 0 1.3-.5 1.7-1.3.5.8 1.2 1.3 2 1.3s1.5-.5 2-1.3c.4.8 1 1.3 1.7 1.3 1.2 0 2-1.1 2-2.9 0-1.7-.6-3.6-1.6-5.1.4-.8.6-1.7.6-2.7 0-3-1.8-5.1-4.7-5.1z"/><ellipse cx="9.4" cy="7.6" rx="1" ry="1.4" fill="#fff"/><ellipse cx="14.6" cy="7.6" rx="1" ry="1.4" fill="#fff"/><path d="M10.8 10.5h2.4l-1.2 1.6z" fill="#fff"/><path d="M6.3 14.8c.9 2.8 2.9 4.3 5.7 4.3s4.8-1.5 5.7-4.3" fill="none" stroke="#fff" stroke-width=".8" stroke-linecap="round"/></svg>' }, link: 'https://qm.qq.com/q/zSaZRWS4eY', ariaLabel: 'QQ' }
+			{ icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M21.395 15.035a40 40 0 0 0-.803-2.264l-1.079-2.695c.001-.032.014-.562.014-.836C19.526 4.632 17.351 0 12 0S4.474 4.632 4.474 9.241c0 .274.013.804.014.836l-1.08 2.695a39 39 0 0 0-.802 2.264c-1.021 3.283-.69 4.643-.438 4.673c.54.065 2.103-2.472 2.103-2.472c0 1.469.756 3.387 2.394 4.771c-.612.188-1.363.479-1.845.835c-.434.32-.379.646-.301.778c.343.578 5.883.369 7.482.189c1.6.18 7.14.389 7.483-.189c.078-.132.132-.458-.301-.778c-.483-.356-1.233-.646-1.846-.836c1.637-1.384 2.393-3.302 2.393-4.771c0 0 1.563 2.537 2.103 2.472c.251-.03.581-1.39-.438-4.673"/></svg>' }, link: 'https://qm.qq.com/q/zSaZRWS4eY', ariaLabel: 'QQ' },
+			{ icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M17.813 4.653h.854q2.266.08 3.773 1.574Q23.946 7.72 24 9.987v7.36q-.054 2.266-1.56 3.773c-1.506 1.507-2.262 1.524-3.773 1.56H5.333q-2.266-.054-3.773-1.56C.053 19.614.036 18.858 0 17.347v-7.36q.054-2.267 1.56-3.76t3.773-1.574h.774l-1.174-1.12a1.23 1.23 0 0 1-.373-.906q0-.534.373-.907l.027-.027q.4-.373.92-.373t.92.373L9.653 4.44q.107.106.187.213h4.267a.8.8 0 0 1 .16-.213l2.853-2.747q.4-.373.92-.373c.347 0 .662.151.929.4s.391.551.391.907q0 .532-.373.906zM5.333 7.24q-1.12.027-1.88.773q-.76.748-.786 1.894v7.52q.026 1.146.786 1.893t1.88.773h13.334q1.12-.026 1.88-.773t.786-1.893v-7.52q-.026-1.147-.786-1.894t-1.88-.773zM8 11.107q.56 0 .933.373q.375.374.4.96v1.173q-.025.586-.4.96q-.373.375-.933.374c-.56-.001-.684-.125-.933-.374q-.375-.373-.4-.96V12.44q0-.56.386-.947q.387-.386.947-.386m8 0q.56 0 .933.373q.375.374.4.96v1.173q-.025.586-.4.96q-.373.375-.933.374c-.56-.001-.684-.125-.933-.374q-.375-.373-.4-.96V12.44q.025-.586.4-.96q.373-.373.933-.373"/></svg>' }, link: 'https://b23.tv/QiGlLcm', ariaLabel: 'Bilibili' }
 		],
 		search: { provider: 'local' }
 	},

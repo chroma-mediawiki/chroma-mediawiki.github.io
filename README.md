@@ -14,7 +14,8 @@
   <a href="https://chroma-mediawiki.github.io/chroma-docs/">中文官网</a> ·
   <a href="https://chroma-mediawiki.github.io/chroma-docs/en/">English site</a> ·
   <a href="https://github.com/chroma-mediawiki/mediawiki-skins-Chroma">皮肤仓库</a> ·
-  <a href="https://qm.qq.com/q/zSaZRWS4eY">QQ</a>
+  <a href="https://qm.qq.com/q/zSaZRWS4eY">QQ</a> ·
+  <a href="https://b23.tv/QiGlLcm">Bilibili</a>
 </p>
 
 <p align="center">
@@ -23,6 +24,7 @@
   <a href="https://github.com/chroma-mediawiki/chroma-docs/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg" alt="License"></a>
   <a href="https://vitepress.dev/"><img src="https://img.shields.io/badge/built%20with-VitePress-006a6a.svg" alt="VitePress"></a>
   <a href="https://qm.qq.com/q/zSaZRWS4eY"><img src="https://img.shields.io/badge/QQ-join-12B7F5.svg" alt="QQ"></a>
+  <a href="https://b23.tv/QiGlLcm"><img src="https://img.shields.io/badge/Bilibili-follow-00A1D6.svg" alt="Bilibili"></a>
 </p>
 
 <p align="center">
