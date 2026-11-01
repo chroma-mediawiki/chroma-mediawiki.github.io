@@ -31,6 +31,14 @@
   <img src="docs/public/screenshots/banner.svg" alt="Chroma banner" width="100%">
 </p>
 
+## 八套预设
+
+| Teal | Blue | Green | Violet |
+|---|---|---|---|
+| <img src="docs/public/screenshots/preset-teal.png" width="240" alt="Teal"> | <img src="docs/public/screenshots/preset-blue.png" width="240" alt="Blue"> | <img src="docs/public/screenshots/preset-green.png" width="240" alt="Green"> | <img src="docs/public/screenshots/preset-violet.png" width="240" alt="Violet"> |
+| **Rose** | **Amber** | **Indigo** | **Lime** |
+| <img src="docs/public/screenshots/preset-rose.png" width="240" alt="Rose"> | <img src="docs/public/screenshots/preset-amber.png" width="240" alt="Amber"> | <img src="docs/public/screenshots/preset-indigo.png" width="240" alt="Indigo"> | <img src="docs/public/screenshots/preset-lime.png" width="240" alt="Lime"> |
+
 ## 这是什么
 
 这个仓库只包含 Chroma 的**文档站**，不包含皮肤代码。皮肤本体、发行包和扩展矩阵在

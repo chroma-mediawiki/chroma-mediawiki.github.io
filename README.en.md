@@ -31,6 +31,14 @@
   <img src="docs/public/screenshots/banner.svg" alt="Chroma banner" width="100%">
 </p>
 
+## Eight presets
+
+| Teal | Blue | Green | Violet |
+|---|---|---|---|
+| <img src="docs/public/screenshots/preset-teal-en.png" width="240" alt="Teal"> | <img src="docs/public/screenshots/preset-blue-en.png" width="240" alt="Blue"> | <img src="docs/public/screenshots/preset-green-en.png" width="240" alt="Green"> | <img src="docs/public/screenshots/preset-violet-en.png" width="240" alt="Violet"> |
+| **Rose** | **Amber** | **Indigo** | **Lime** |
+| <img src="docs/public/screenshots/preset-rose-en.png" width="240" alt="Rose"> | <img src="docs/public/screenshots/preset-amber-en.png" width="240" alt="Amber"> | <img src="docs/public/screenshots/preset-indigo-en.png" width="240" alt="Indigo"> | <img src="docs/public/screenshots/preset-lime-en.png" width="240" alt="Lime"> |
+
 ## What this repository is
 
 This repository contains the **documentation site** for Chroma, not the skin code.
