@@ -1,5 +1,6 @@
 ---
 layout: home
+title: MediaWiki skin
 
 hero:
   name: Chroma
