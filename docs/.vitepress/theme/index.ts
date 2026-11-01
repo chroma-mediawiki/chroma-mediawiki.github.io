@@ -16,8 +16,8 @@ export default {
 				if (!anchor) return
 				try {
 					const path = new URL(anchor.href, location.href).pathname
-					if (path.startsWith('/chroma-docs/en/')) localStorage.setItem('chroma-lang', 'en')
-					else if (path.startsWith('/chroma-docs/')) localStorage.setItem('chroma-lang', 'zh')
+					if (path.startsWith('/en/')) localStorage.setItem('chroma-lang', 'en')
+					else if (path.startsWith('/')) localStorage.setItem('chroma-lang', 'zh')
 				} catch {}
 			}, true)
 		}

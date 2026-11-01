@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress'
 
 const repo = 'https://github.com/chroma-mediawiki/mediawiki-skins-Chroma'
-const docsRepo = 'https://github.com/chroma-mediawiki/chroma-docs'
-const site = 'https://chroma-mediawiki.github.io/chroma-docs'
+const docsRepo = 'https://github.com/chroma-mediawiki/chroma-mediawiki.github.io'
+const site = 'https://chroma-mediawiki.github.io'
 
 const zhTheme = {
 	nav: [
@@ -158,7 +158,7 @@ export default defineConfig({
 	titleTemplate: ':title · Chroma',
 	description: '色彩驱动、阅读优先的 MediaWiki 皮肤。',
 
-	base: '/chroma-docs/',
+	base: '/',
 	cleanUrls: true,
 	lastUpdated: true,
 
@@ -177,13 +177,13 @@ export default defineConfig({
 	},
 
 	head: [
-		['link', { rel: 'icon', type: 'image/svg+xml', href: '/chroma-docs/logo.svg' }],
+		['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
 		['meta', { name: 'theme-color', content: '#006A6A' }],
 		['meta', { property: 'og:type', content: 'website' }],
 		['meta', { property: 'og:title', content: 'Chroma · MediaWiki skin' }],
 		['meta', { property: 'og:description', content: 'A color-first MediaWiki skin with Material 3-style tokens and reading-first layouts.' }],
 		['meta', { property: 'og:image', content: `${site}/screenshots/content-light-en.png` }],
-		['script', {}, `(function(){try{var p=location.pathname;if(p.indexOf('/chroma-docs/en/')===0)return;var s=localStorage.getItem('chroma-lang');if(s==='zh'||s==='en')return;var langs=navigator.languages||[navigator.language||'en'];var lang=langs[0]||'en';if(!/^zh/i.test(lang)){var rest=p.replace('/chroma-docs','')||'/';if(rest.charAt(0)!=='/')rest='/'+rest;location.replace('/chroma-docs/en'+rest+location.search+location.hash);}}catch(e){}})();`]
+		['script', {}, `(function(){try{var p=location.pathname;if(p.indexOf('/en/')===0)return;var s=localStorage.getItem('chroma-lang');if(s==='zh'||s==='en')return;var langs=navigator.languages||[navigator.language||'en'];var lang=langs[0]||'en';if(!/^zh/i.test(lang)){var rest=p||'/';if(rest.charAt(0)!=='/')rest='/'+rest;location.replace('/en'+rest+location.search+location.hash);}}catch(e){}})();`]
 	],
 
 	themeConfig: {

@@ -11,17 +11,17 @@
 
 <p align="center">
   <a href="README.md">简体中文</a> ·
-  <a href="https://chroma-mediawiki.github.io/chroma-docs/en/">English site</a> ·
-  <a href="https://chroma-mediawiki.github.io/chroma-docs/">Chinese site</a> ·
+  <a href="https://chroma-mediawiki.github.io/en/">English site</a> ·
+  <a href="https://chroma-mediawiki.github.io/">Chinese site</a> ·
   <a href="https://github.com/chroma-mediawiki/mediawiki-skins-Chroma">Skin repository</a> ·
   <a href="https://qm.qq.com/q/zSaZRWS4eY">QQ</a> ·
   <a href="https://b23.tv/QiGlLcm">Bilibili</a>
 </p>
 
 <p align="center">
-  <a href="https://chroma-mediawiki.github.io/chroma-docs/en/"><img src="https://img.shields.io/badge/site-GitHub%20Pages-006a6a.svg" alt="Site"></a>
-  <a href="https://github.com/chroma-mediawiki/chroma-docs/actions/workflows/pages.yml"><img src="https://github.com/chroma-mediawiki/chroma-docs/actions/workflows/pages.yml/badge.svg" alt="Deploy docs"></a>
-  <a href="https://github.com/chroma-mediawiki/chroma-docs/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg" alt="License"></a>
+  <a href="https://chroma-mediawiki.github.io/en/"><img src="https://img.shields.io/badge/site-GitHub%20Pages-006a6a.svg" alt="Site"></a>
+  <a href="https://github.com/chroma-mediawiki/chroma-mediawiki.github.io/actions/workflows/pages.yml"><img src="https://github.com/chroma-mediawiki/chroma-mediawiki.github.io/actions/workflows/pages.yml/badge.svg" alt="Deploy docs"></a>
+  <a href="https://github.com/chroma-mediawiki/chroma-mediawiki.github.io/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg" alt="License"></a>
   <a href="https://vitepress.dev/"><img src="https://img.shields.io/badge/built%20with-VitePress-006a6a.svg" alt="VitePress"></a>
   <a href="https://qm.qq.com/q/zSaZRWS4eY"><img src="https://img.shields.io/badge/QQ-join-12B7F5.svg" alt="QQ"></a>
   <a href="https://b23.tv/QiGlLcm"><img src="https://img.shields.io/badge/Bilibili-follow-00A1D6.svg" alt="Bilibili"></a>
@@ -37,20 +37,20 @@ This repository contains the **documentation site** for Chroma, not the skin cod
 The skin, release packages and extension matrix live in
 [mediawiki-skins-Chroma](https://github.com/chroma-mediawiki/mediawiki-skins-Chroma).
 
-- English site: https://chroma-mediawiki.github.io/chroma-docs/en/
-- Chinese site: https://chroma-mediawiki.github.io/chroma-docs/
+- English site: https://chroma-mediawiki.github.io/en/
+- Chinese site: https://chroma-mediawiki.github.io/
 - Language detection: Chinese browsers open the Chinese site; every other language opens English.
 
 ## Documentation map
 
 | I want to… | Go to |
 |---|---|
-| Install Chroma | [Installation](https://chroma-mediawiki.github.io/chroma-docs/en/guide/installation) |
-| Change theme/layout | [Configuration](https://chroma-mediawiki.github.io/chroma-docs/en/guide/configuration) |
-| Learn the interface | [Interface & navigation](https://chroma-mediawiki.github.io/chroma-docs/en/guide/usage) |
-| Use MobileFrontend | [Mobile](https://chroma-mediawiki.github.io/chroma-docs/en/guide/mobile) |
-| Change tokens / release | [Development](https://chroma-mediawiki.github.io/chroma-docs/en/dev/) |
-| Check extension support | [Compatibility](https://chroma-mediawiki.github.io/chroma-docs/en/guide/compatibility) |
+| Install Chroma | [Installation](https://chroma-mediawiki.github.io/en/guide/installation) |
+| Change theme/layout | [Configuration](https://chroma-mediawiki.github.io/en/guide/configuration) |
+| Learn the interface | [Interface & navigation](https://chroma-mediawiki.github.io/en/guide/usage) |
+| Use MobileFrontend | [Mobile](https://chroma-mediawiki.github.io/en/guide/mobile) |
+| Change tokens / release | [Development](https://chroma-mediawiki.github.io/en/dev/) |
+| Check extension support | [Compatibility](https://chroma-mediawiki.github.io/en/guide/compatibility) |
 
 ## Local development
 

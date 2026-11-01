@@ -9,4 +9,4 @@ VitePress site; the public documentation lives in `docs/`.
 - mediawiki.org / translatewiki notes
 - Full design spec
 
-Public pages: https://chroma-mediawiki.github.io/chroma-docs/
+Public pages: https://chroma-mediawiki.github.io/
