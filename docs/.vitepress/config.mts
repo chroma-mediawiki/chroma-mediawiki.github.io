@@ -10,7 +10,8 @@ const zhTheme = {
 		{ text: '配置', link: '/guide/configuration' },
 		{ text: '开发', link: '/dev/', activeMatch: '/dev/' },
 		{ text: '兼容性', link: '/guide/compatibility' },
-		{ text: '更新日志', link: '/changelog' }
+		{ text: '更新日志', link: '/changelog' },
+		{ text: 'QQ 群', link: 'https://qm.qq.com/q/zSaZRWS4eY' }
 	],
 	sidebar: {
 		'/guide/': [
@@ -94,7 +95,8 @@ const enTheme = {
 		{ text: 'Configuration', link: '/en/guide/configuration' },
 		{ text: 'Development', link: '/en/dev/', activeMatch: '/en/dev/' },
 		{ text: 'Compatibility', link: '/en/guide/compatibility' },
-		{ text: 'Changelog', link: '/en/changelog' }
+		{ text: 'Changelog', link: '/en/changelog' },
+		{ text: 'QQ group', link: 'https://qm.qq.com/q/zSaZRWS4eY' }
 	],
 	sidebar: {
 		'/en/guide/': [
