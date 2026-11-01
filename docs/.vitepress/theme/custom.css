@@ -81,13 +81,12 @@ body { font-feature-settings: "kern" 1, "liga" 1; }
 .VPButton.alt { background: var(--vp-c-bg-soft); border-color: var(--vp-c-border); }
 .VPHero .image-container { transform: translate(0, 0); }
 .VPHero .image-src {
-	max-width: 430px;
-	max-height: 300px;
-	border: 1px solid var(--vp-c-border);
-	border-radius: 24px;
-	object-fit: cover;
-	object-position: top;
-	box-shadow: 0 24px 70px rgba(0, 80, 80, .22);
+	max-width: 500px;
+	max-height: 390px;
+	border: 0;
+	border-radius: 0;
+	object-fit: contain;
+	box-shadow: none;
 }
 
 @media (min-width: 960px) {
@@ -119,4 +118,10 @@ body { font-feature-settings: "kern" 1, "liga" 1; }
 
 @media (max-width: 960px) {
 	.VPHero .image { display: none; }
+}
+
+@media (min-width: 960px) {
+	.VPHero .actions { flex-wrap: nowrap; gap: 8px; }
+	.VPHero .actions .action { flex: 0 0 auto; }
+	.VPHero .actions .VPButton { padding-inline: 16px !important; }
 }

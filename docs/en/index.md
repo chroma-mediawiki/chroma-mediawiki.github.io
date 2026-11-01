@@ -7,8 +7,8 @@ hero:
   text: Color for MediaWiki
   tagline: A color-first, reading-first MediaWiki skin. Material 3-style design tokens, app and reading layouts, and a full mobile takeover with MobileFrontend.
   image:
-    src: /screenshots/content-light-en.png
-    alt: Chroma MediaWiki skin screenshot
+    src: /hero-visual.svg
+    alt: "Chroma design tokens: color, type, shape and tokens"
   actions:
     - theme: brand
       text: Install

@@ -7,8 +7,8 @@ hero:
   text: 给 MediaWiki 上色
   tagline: 色彩驱动、阅读优先的 MediaWiki 皮肤。Material 3 风格的 token 体系，应用式与阅读式两种布局，MobileFrontend 全接管手机端。
   image:
-    src: /screenshots/content-light.png
-    alt: Chroma MediaWiki 皮肤截图
+    src: /hero-visual.svg
+    alt: Chroma 设计 token：色彩、字阶、形状与 token
   actions:
     - theme: brand
       text: 开始安装
